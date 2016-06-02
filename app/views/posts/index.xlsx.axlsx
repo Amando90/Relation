@@ -1,0 +1,6 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Posts") do |sheet|
+	@posts.each do |f|
+		sheet.add_row [f.title, f.content]
+	end
+end
